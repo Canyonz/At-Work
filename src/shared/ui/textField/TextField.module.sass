@@ -1,0 +1,26 @@
+.textField
+  display: flex
+  flex-direction: column
+  gap: 10px
+
+.label
+
+.inputWrapper
+  display: flex
+  gap: 8px
+  padding: 10px 8px 16px 10px
+  border: 2px solid var(--light-gray-color)
+  border-radius: 50px
+
+  .input
+    flex: 1
+    &::placeholder
+      color: var(--dark-gray-color)
+
+    &:focus
+      + .btn
+        display: block
+
+  .btn
+    display: none
+    color: var(--dark-gray-color)

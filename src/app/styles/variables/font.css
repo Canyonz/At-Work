@@ -1,0 +1,47 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
+
+:root {
+	font-family: "Manrope", serif;
+
+	--font-weight-normal: 500;
+	--font-weight-bold: 600;
+
+	--font-size-caption: 14px;
+	--font-caption: var(--font-size-caption) / var(--font-weight-normal);
+
+	--font-size-text2: 16px;
+	--font-text2: var(--font-size-text2) / var(--font-weight-normal);
+
+	--font-size-text2Bold: 16px;
+	--font-text2Bold: var(--font-size-text2Bold) / var(--font-weight-bold);
+
+	--font-size-text1: 18px;
+	--font-text1: var(--font-size-text1) / var(--font-weight-normal);
+
+	--font-size-text1Bold: 18px;
+	--font-text1Bold: var(--font-size-text1Bold) / var(--font-weight-bold);
+
+	--font-size-headline: 20px;
+	--font-headline: var(--font-size-headline) / var(--font-weight-bold);
+
+	--font-size-title: 24px;
+	--font-title: var(--font-size-title) / var(--font-weight-bold);
+
+	font-synthesis: none;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+@media (max-width: 768px) {
+	:root {
+		--font-size-caption: 10px;
+		--font-caption: var(--font-size-caption) / var(--font-weight-bold);
+
+		--font-size-text2: 14px;
+		--font-size-text2Bold: 14px;
+		--font-size-text1: 16px;
+		--font-size-text1Bold: 16px;
+		--font-size-headline: 18px;
+	}
+}

@@ -1,0 +1,10 @@
+@import "reset";
+@import "./theme/base.css";
+@import "./variables/font.css";
+
+body {
+	min-height: 100vh;
+
+	font: var(--font-text2);
+	color: var(--white-color);
+}
