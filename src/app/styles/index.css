@@ -6,5 +6,6 @@ body {
 	min-height: 100vh;
 
 	font: var(--font-text2);
-	color: var(--white-color);
+	color: var(--dark-color);
+	background-color: var(--light-color);
 }

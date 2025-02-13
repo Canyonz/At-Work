@@ -2,22 +2,33 @@
   display: flex
   align-items: center
   justify-content: center
+  cursor: pointer
+  border: none
 
-  .default
-    padding: 12px 42px
-    font: var(--font-text2Bold)
-    background-color: var(--dark-color)
-    color: var(--dark-gray-color)
-    border-radius: 50px
+.default
+  padding: 12px 42px
+  font: var(--font-text2Bold)
+  background-color: var(--dark-color)
+  color: var(--dark-gray-color)
+  border-radius: 50px
 
-    &:hover
-      background-color: var(--light-color)
+  &:hover
+    background-color: var(--light-color)
 
-  .icon
-    width: 24px
-    height: 24px
-    padding: 4px 4px
-    color: var(--dark-color)
+.icon
+  width: 24px
+  height: 24px
+  background-color: transparent
+  // padding: 4px 4px
+  color: var(--dark-color)
 
-    &:hover
+  svg
+    transition: color 0.2s ease
+
+  &:hover
+    svg
       color: var(--accent-color)
+
+  &:active
+    svg
+      color: var(--darg-gray-color)
