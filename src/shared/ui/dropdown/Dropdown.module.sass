@@ -1,0 +1,27 @@
+.dropdown
+  position: relative
+  width: max-content
+
+  &Menu
+    position: absolute
+    top: 100%
+    right: 0
+    display: flex
+    flex-direction: column
+    gap: 8px
+    padding: 8px
+    border-radius: 12px
+    width: 200px
+    background-color: var(--white-color)
+    box-shadow: 0 0 2px 0 #5A5A5A
+    list-style: none
+    z-index: 1000
+
+    &Item
+      padding: 8px 12px
+      font: var(--font-text2)
+      transition: background-color 0.3s ease
+      cursor: pointer
+
+      &:hover
+        background-color: var(--light-color)

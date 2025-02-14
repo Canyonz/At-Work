@@ -7,7 +7,6 @@ import CrossSVG from "../../assets/icons/cross.svg";
 
 interface TextFieldProps extends InputHTMLAttributes<HTMLInputElement> {
 	title?: string;
-	className?: string;
 }
 
 export const TextField = ({ name, title, className, ...props }: TextFieldProps) => {

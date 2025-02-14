@@ -5,9 +5,12 @@ type ButtonVariant = "default" | "icon";
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 	variant?: ButtonVariant;
-	className?: string;
 }
 
-export const Button = ({ variant = "default", children, className }: ButtonProps) => {
-	return <button className={clsx(styles.button, styles[variant], className)}>{children}</button>;
+export const Button = ({ variant = "default", children, className, ...props }: ButtonProps) => {
+	return (
+		<button className={clsx(styles.button, styles[variant], className)} {...props}>
+			{children}
+		</button>
+	);
 };

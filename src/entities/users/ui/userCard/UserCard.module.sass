@@ -1,6 +1,7 @@
 .userCard
   display: flex
   gap: 20px
+  max-width: 360px
   padding: 24px
   background-color: var(--white-color)
   border-radius: 16px
@@ -10,19 +11,50 @@
     border-radius: 8px
 
   .userCardInfo
+    flex: 1
     display: flex
     flex-direction: column
     justify-content: space-between
 
     .userCardInfoPart
+      display: flex
+      flex-direction: column
+      gap: 4px
 
       .nameWithBtnAction
+        display: flex
+        justify-content: space-between
+        gap: 16px
 
         .name
+          max-width: 140px
           color: var(--accent-color)
 
       .job
+        max-width: 180px
         color: var(--dark-gray-color)
 
     .city
+      max-width: 180px
       color: var(--gray-color)
+
+    .name, .job, .city
+      white-space: nowrap
+      overflow: hidden
+      text-overflow: ellipsis
+
+  &.archive
+    .image
+      filter: grayscale(100%)
+
+    .userCardInfo
+      .userCardInfoPart
+        .nameWithBtnAction
+          .name
+            color: var(--dark-gray-color)
+
+        .job
+          color: var(--gray-color)
+
+      .city
+        color: var(--light-gray-color)
