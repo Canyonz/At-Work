@@ -11,35 +11,40 @@ import {
 } from "@/shared/lib/consts/routes";
 import { createBrowserRouter } from "react-router-dom";
 
-export const routerConfig = createBrowserRouter([
+export const routerConfig = createBrowserRouter(
+	[
+		{
+			element: <App />,
+			children: [
+				{
+					path: getRouteMain(),
+					element: <MainPage />,
+				},
+				{
+					element: <DashboardLayout />,
+					children: [
+						{
+							path: getRouteUserDetails(":id"),
+							element: <ProfilePage />,
+						},
+						{
+							path: getRouteUserWorkSpace(":id"),
+							element: <PrivacyPage />,
+						},
+						{
+							path: getRouteUserPrivacy(":id"),
+							element: <SecuryPage />,
+						},
+						{
+							path: getRouteUserSecury(":id"),
+							element: <WorkSpacePage />,
+						},
+					],
+				},
+			],
+		},
+	],
 	{
-		element: <App />,
-		children: [
-			{
-				path: getRouteMain(),
-				element: <MainPage />,
-			},
-			{
-				element: <DashboardLayout />,
-				children: [
-					{
-						path: getRouteUserDetails(":id"),
-						element: <ProfilePage />,
-					},
-					{
-						path: getRouteUserWorkSpace(":id"),
-						element: <PrivacyPage />,
-					},
-					{
-						path: getRouteUserPrivacy(":id"),
-						element: <SecuryPage />,
-					},
-					{
-						path: getRouteUserSecury(":id"),
-						element: <WorkSpacePage />,
-					},
-				],
-			},
-		],
-	},
-]);
+		basename: "/At-Work/",
+	}
+);

@@ -13,7 +13,7 @@ export interface UserCardProps {
 export const UserCard = ({ user, archive, BtnAction, className }: UserCardProps) => {
 	return (
 		<div className={clsx(styles.userCard, { [styles.archive]: archive }, className)}>
-			<img src={user.avatar || "/images/default.jpg"} alt="user card image" width={112} height={120} className={styles.image} />
+			<img src={user.avatar || "./images/default.jpg"} alt="user card image" width={112} height={120} className={styles.image} />
 			<div className={styles.userCardInfo}>
 				<div className={styles.userCardInfoPart}>
 					<div className={styles.nameWithBtnAction}>

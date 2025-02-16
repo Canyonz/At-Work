@@ -48,7 +48,7 @@ export const EditSelectedUser = ({ userId, className }: EditSelectUserProps) => 
 			{isSucceful && (
 				<Modal onClose={handleCloseModal}>
 					<div className={styles.modal}>
-						<img src="/images/succesful.png" alt="succesful" width={84} height={84}/>
+						<img src="./images/succesful.png" alt="succesful" width={84} height={84}/>
 						<Text text="Изменения сохранены!" size="lg" bold align="center" />
 					</div>
 				</Modal>

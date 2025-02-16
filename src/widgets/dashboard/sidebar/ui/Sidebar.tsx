@@ -13,7 +13,7 @@ export const Sidebar = ({ id, className }: SidebarProps) => {
 
 	return (
 		<div className={clsx(styles.sidebar, className)}>
-			<img src={userData?.avatar || "/images/default.jpg"} alt="Avatar" width={280} height={485} className={styles.image} />
+			<img src={userData?.avatar || "./images/default.jpg"} alt="Avatar" width={280} height={485} className={styles.image} />
 
 			<NavLinks id={id} />
 		</div>

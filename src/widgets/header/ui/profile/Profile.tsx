@@ -22,7 +22,7 @@ export const Profile = ({ className }: ProfileProps) => {
 			</div>
 
 			<div className={styles.profileInfo}>
-				<img src="/images/default.jpg" width={20} height={20} className={styles.image} />
+				<img src="./images/default.jpg" width={20} height={20} className={styles.image} />
 				<Text text="Ivan1234" className={styles.login} />
 			</div>
 		</div>

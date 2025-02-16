@@ -38,7 +38,7 @@ export const Burger = ({ className }: BurgerProps) => {
 	return (
 		<div ref={dropdownRef} className={clsx(styles.burger, className)}>
 			<Button variant="icon" onClick={handleClickToggleDropDown}>
-				<img src="/images/default.jpg" width={20} height={20} className={styles.image} />
+				<img src="./images/default.jpg" width={20} height={20} className={styles.image} />
 			</Button>
 
 			{isOpen && (

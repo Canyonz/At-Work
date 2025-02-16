@@ -39,7 +39,7 @@ const userSlice = createSlice({
 		});
 		builder.addCase(fetchUsers.fulfilled, (state, action: PayloadAction<UserData[]>) => {
 			state.dataById = action.payload.reduce((acc, user) => {
-				acc[user.id] = { ...user, avatar: user.avatar || "/images/default.jpg" };
+				acc[user.id] = { ...user, avatar: user.avatar || "./images/default.jpg" };
 				return acc;
 			}, {} as Record<string, UserData>);
 			state.isLoading = false;
