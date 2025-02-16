@@ -9,10 +9,12 @@ interface Company {
 export interface UserData {
 	id: number;
 	username: string;
+	email: string;
 	address: Address;
+	phone: string;
 	company: Company;
-	avatar: string;
-	archive: boolean;
+	avatar?: string;
+	archive?: boolean;
 }
 
 export interface UserSchema {

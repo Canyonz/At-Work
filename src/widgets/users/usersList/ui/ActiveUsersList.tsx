@@ -1,10 +1,11 @@
-import { getUsersData, getUsersError, getUsersIsLoading, UserCard } from "@/entities/users";
+import { getUsersError, getUsersIsLoading, UserCard } from "@/entities/users";
 import { UserList } from "./usersList/UsersList";
 import { useSelector } from "react-redux";
 import { DropdownActiveActions } from "@/features/users";
+import { getUsersActive } from "@/entities/users/model/selectors/userSelectors";
 
 export const ActiveUsersList = ({ className }: React.HTMLAttributes<HTMLDivElement>) => {
-	const users = useSelector(getUsersData);
+	const users = useSelector(getUsersActive);
 	const error = useSelector(getUsersError);
 	const isLoading = useSelector(getUsersIsLoading);
 

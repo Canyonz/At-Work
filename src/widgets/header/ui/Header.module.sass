@@ -4,3 +4,14 @@
   justify-content: space-between
   padding: 16px clamp(16px, calc(16px + (150 - 16) * ((100vw - 375px) / (1440 - 375))), 150px)
   background-color: var(--white-color)
+
+  .burger
+    display: none
+
+@media (max-width: 768px)
+  .header
+    .profile
+      display: none
+
+    .burger
+      display: block

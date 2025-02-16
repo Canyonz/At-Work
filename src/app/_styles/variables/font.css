@@ -31,6 +31,9 @@
 	text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+
+	--overlay-z-index: 900;
+	--modal-z-index: 1000;
 }
 
 @media (max-width: 768px) {

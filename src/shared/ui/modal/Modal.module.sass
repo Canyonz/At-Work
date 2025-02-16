@@ -1,0 +1,23 @@
+.modal
+	display: flex
+	justify-content: center
+	align-items: center
+	position: fixed
+	inset: 0
+	z-index: var(--modal-z-index)
+
+	.content
+		// padding: 12px 12px 40px 40px
+		position: relative
+		padding: 40px
+		background: var(--white-color)
+		border-radius: 12px
+		z-index: var(--modal-z-index)
+
+		.btnClose
+			position: absolute
+			top: 12px
+			right: 12px
+			width: 40px
+			height: 40px
+			z-index: var(--modal-z-index)

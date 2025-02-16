@@ -18,7 +18,7 @@ export const DropdownActiveActions = ({ userId, className }: DropdownActiveActio
 
 	const options = useMemo(
 		() => [
-			{ label: "Редактировать", onClick: () => router(getRouteUserDetails(userId)) },
+			{ label: "Редактировать", onClick: () => router(getRouteUserDetails(userId.toString())) },
 			{ label: "Архивировать", onClick: () => handleArchiveUser(userId) },
 			{ label: "Скрыть", onClick: () => handleHideUser(userId) },
 		],

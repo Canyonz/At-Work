@@ -15,6 +15,7 @@
     display: flex
     flex-direction: column
     justify-content: space-between
+    gap: 12px
 
     .userCardInfoPart
       display: flex
@@ -58,3 +59,21 @@
 
       .city
         color: var(--light-gray-color)
+
+@media (max-width: 768px)
+  .userCard
+    flex-direction: column
+    gap: 16px
+    padding: 16px
+
+    .image
+      width: 100%
+
+    .userCardInfo
+      .userCardInfoPart
+        .nameWithBtnAction
+          .name
+
+        .job
+
+      .city

@@ -3,24 +3,30 @@
   flex-direction: column
   gap: 10px
 
-.label
+  .label
+    font: var(--font-text1)
 
-.inputWrapper
-  display: flex
-  gap: 8px
-  padding: 10px 8px 16px 10px
-  border: 2px solid var(--light-gray-color)
-  border-radius: 50px
+  .inputWrapper
+    display: flex
+    align-items: center
+    gap: 8px
+    height: 42px
+    padding: 10px 8px 10px 16px
+    border: 2px solid var(--light-gray-color)
+    border-radius: 50px
 
-  .input
-    flex: 1
-    &::placeholder
+    .input
+      flex: 1
+      background-color: transparent
+      border: none
+      outline: none
+      font: var(--font-text2)
+
+      &::placeholder
+        color: var(--dark-gray-color)
+
+    .btn
       color: var(--dark-gray-color)
 
-    &:focus
-      + .btn
-        display: block
-
-  .btn
-    display: none
-    color: var(--dark-gray-color)
+  .error
+    color: var(--error-color)

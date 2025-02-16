@@ -8,7 +8,14 @@ const usersApi = $rtkApi.injectEndpoints({
 				url: `/users/`,
 			}),
 		}),
+
+		getUserById: build.query<UserData, { id: number }>({
+			query: ({ id }) => ({
+				url: `/users/${id}`,
+			}),
+		}),
 	}),
 });
 
 export const getUsers = usersApi.endpoints.getUsers.initiate;
+export const { useGetUserByIdQuery } = usersApi;

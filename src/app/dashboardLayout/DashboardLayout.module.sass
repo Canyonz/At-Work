@@ -1,0 +1,27 @@
+.dashboardLayoutWrapper
+  display: flex
+  flex-direction: column
+  gap: 24px
+  padding: 0 clamp(16px, calc(16px + (140 - 16) * ((100vw - 375px) / (1440 - 375))), 140px) 265px
+
+  .backLink
+    align-self: start
+
+  .dashboardLayout
+    display: grid
+    grid-template-columns: 360px 1fr
+    gap: 40px
+
+    .sidebar
+      align-self: start
+
+@media (max-width: 768px)
+  .dashboardLayoutWrapper
+    padding-bottom: 32px
+
+    .dashboardLayout
+      grid-template-columns: auto
+      gap: 32px
+
+      .sidebar
+        justify-content: center

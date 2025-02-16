@@ -5,30 +5,37 @@
   cursor: pointer
   border: none
 
-.default
-  padding: 12px 42px
-  font: var(--font-text2Bold)
-  background-color: var(--dark-color)
-  color: var(--dark-gray-color)
-  border-radius: 50px
+  &.default
+    padding: 12px 42px
+    font: var(--font-text2Bold)
+    color: var(--white-color)
+    background-color: var(--dark-color)
+    border-radius: 50px
+    transition: color 0.2s, background-color 0.2s
 
-  &:hover
-    background-color: var(--light-color)
-
-.icon
-  width: 24px
-  height: 24px
-  background-color: transparent
-  // padding: 4px 4px
-  color: var(--dark-color)
-
-  svg
-    transition: color 0.2s ease
-
-  &:hover
-    svg
-      color: var(--accent-color)
-
-  &:active
-    svg
+    &:hover
       color: var(--dark-gray-color)
+      background-color: var(--light-color)
+
+    &:disabled
+      cursor: auto
+      background-color: var(--light-gray-color)
+      color: var(--gray-color)
+
+  &.icon
+    width: 24px
+    height: 24px
+    background-color: transparent
+    // padding: 4px 4px
+    color: var(--dark-color)
+
+    svg
+      transition: color 0.2s ease
+
+    &:hover
+      svg
+        color: var(--accent-color)
+
+    &:active
+      svg
+        color: var(--dark-gray-color)

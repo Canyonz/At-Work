@@ -1,25 +1,37 @@
 import clsx from "clsx";
 import styles from "./TextField.module.sass";
-import { InputHTMLAttributes } from "react";
-import { Text } from "../text/Text";
-import { Button } from "../button/Button";
+import React, { InputHTMLAttributes } from "react";
 import CrossSVG from "../../assets/icons/cross.svg";
+import { Button } from "../button/Button";
+import { Text } from "../text/Text";
 
 interface TextFieldProps extends InputHTMLAttributes<HTMLInputElement> {
 	title?: string;
+	error?: string;
+	onClearField?: () => void;
 }
 
-export const TextField = ({ name, title, className, ...props }: TextFieldProps) => {
-	return (
-		<div className={clsx(styles.textField, className)}>
-			{title && <Text text={title} size="lg" bold />}
-			<label htmlFor={name} className={styles.label}></label>
-			<div className={styles.inputWrapper}>
-				<input name={name} className={styles.input} {...props} />
-				<Button variant="icon" className={styles.btn}>
-					<CrossSVG />
-				</Button>
+export const TextField = React.forwardRef<HTMLInputElement, TextFieldProps>(
+	({ title, error, className, onClearField, ...props }, ref) => {
+		return (
+			<div className={clsx(styles.textField, className)}>
+				{title && (
+					<label htmlFor={props.name} className={styles.label}>
+						{title}
+					</label>
+				)}
+				<div className={styles.inputWrapper}>
+					<input id={props.name} ref={ref} className={styles.input} {...props} />
+
+					{props.value && onClearField && (
+						<Button variant="icon" type="button" onClick={onClearField} className={styles.btn}>
+							<CrossSVG width={10} height={10} />
+						</Button>
+					)}
+				</div>
+
+				{error && <Text text={error} size="xs" className={styles.error} />}
 			</div>
-		</div>
-	);
-};
+		);
+	}
+);
